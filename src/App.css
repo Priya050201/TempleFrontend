@@ -1,0 +1,26 @@
+body{
+    background-color:#fff8e1;
+}
+
+/* dashboard cards */
+
+.dashboard-card{
+    border-radius:20px;
+    transition:0.3s ease;
+    cursor:pointer;
+    background:white;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0px 10px 25px rgba(0,0,0,0.15);
+}
+
+.dashboard-card h2{
+    font-size:50px;
+}
+
+.dashboard-card button{
+    border-radius:25px;
+    padding:10px 20px;
+}
