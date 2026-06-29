@@ -27,7 +27,7 @@ function ManageFestivals() {
   const fetchFestivals = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/festival/all",
+        "https://temple-backend-production-07ab.up.railway.app/festival/all",
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -58,7 +58,7 @@ function ManageFestivals() {
     try {
 
       await axios.post(
-        "http://localhost:8080/festival/add",
+        "https://temple-backend-production-07ab.up.railway.app/festival/add",
         formData,
         {
           headers: {
@@ -94,7 +94,7 @@ function ManageFestivals() {
 
   const handleUpdate = async () => {
     await axios.put(
-      `http://localhost:8080/festival/update/${editingId}`,
+      `https://temple-backend-production-07ab.up.railway.app/festival/update/${editingId}`,
       formData,
       {
         headers: { Authorization: `Bearer ${token}` }
@@ -108,7 +108,7 @@ function ManageFestivals() {
 
   const handleDelete = async (id) => {
     await axios.delete(
-      `http://localhost:8080/festival/delete/${id}`,
+      `https://temple-backend-production-07ab.up.railway.app/festival/delete/${id}`,
       {
         headers: { Authorization: `Bearer ${token}` }
       }
