@@ -19,7 +19,7 @@ function ManageDonation() {
   const fetchPending = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/donation/pending",
+        "https://temple-backend-production-07ab.up.railway.app/donation/pending",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -39,7 +39,7 @@ function ManageDonation() {
   const fetchAccepted = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/donation/accepted",
+        "https://temple-backend-production-07ab.up.railway.app/donation/accepted",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -74,7 +74,7 @@ function ManageDonation() {
     try {
 
       await axios.put(
-        `http://localhost:8080/donation/accept/${id}?verifiedBy=${adminName}`,
+        `https://temple-backend-production-07ab.up.railway.app/donation/accept/${id}?verifiedBy=${adminName}`,
         {},
         {
           headers: {
@@ -99,7 +99,7 @@ function ManageDonation() {
     try {
 
       await axios.put(
-        `http://localhost:8080/donation/reject/${id}`,
+        `https://temple-backend-production-07ab.up.railway.app/donation/reject/${id}`,
         {},
         {
           headers: {
@@ -131,7 +131,7 @@ function ManageDonation() {
     try {
 
       await axios.delete(
-        `http://localhost:8080/donation/delete/${id}`,
+        `https://temple-backend-production-07ab.up.railway.app/donation/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
