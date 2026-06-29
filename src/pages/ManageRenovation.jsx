@@ -26,7 +26,7 @@ function ManageRenovation() {
   const fetchRenovations = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/renovation/all",
+        "https://temple-backend-production-07ab.up.railway.app/renovation/all",
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -58,7 +58,7 @@ function ManageRenovation() {
     try {
 
       await axios.post(
-        "http://localhost:8080/renovation/add",
+        "https://temple-backend-production-07ab.up.railway.app/renovation/add",
         formData,
         {
           headers: {
@@ -95,7 +95,7 @@ function ManageRenovation() {
 
   const handleUpdate = async () => {
     await axios.put(
-      `http://localhost:8080/renovation/update/${editingId}`,
+      `https://temple-backend-production-07ab.up.railway.app/renovation/update/${editingId}`,
       formData,
       {
         headers: { Authorization: `Bearer ${token}` }
@@ -109,7 +109,7 @@ function ManageRenovation() {
 
   const handleDelete = async (id) => {
     await axios.delete(
-      `http://localhost:8080/renovation/delete/${id}`,
+      `https://temple-backend-production-07ab.up.railway.app/renovation/delete/${id}`,
       {
         headers: { Authorization: `Bearer ${token}` }
       }
